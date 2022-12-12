@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage('show_dir') {
+            steps {
+                ls -la
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
@@ -10,11 +15,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                python test/test_all.py
             }
         }
     }
