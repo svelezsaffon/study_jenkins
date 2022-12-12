@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                python test/test_all.py
             }
         }
     }
