@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('show_dir') {
             steps {
-                ls
+                dir
             }
         }
         stage('Build') {
